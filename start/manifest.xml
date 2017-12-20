@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="start-5eab6c">
+ <names>
+  <name lang="en_US">start</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent topicName="concept" typeVersion="1.0">
+   <topic language="en_US" path="concept/concept_enu.top"/>
+  </dialogContent>
+  <dialogContent topicName="drink" typeVersion="1.0">
+   <topic language="en_US" path="drink/drink_enu.top"/>
+  </dialogContent>
+  <dialogContent topicName="food" typeVersion="1.0">
+   <topic language="en_US" path="food/food_enu.top"/>
+  </dialogContent>
+ </contents>
+</package>

@@ -1,0 +1,33 @@
+topic: ~topic_dialog_with_pepper()
+language: enu
+
+
+concept:(greetings) [hi hello "good morning" "hey there"]
+concept:(yes) [sure "off course" "yes sir"]
+concept:(snack) [chips pringles peanuts]
+concept:(candies) ["chocolate bar" mints "chocolate egg"]
+concept:(food) [noodles apple paprika melon sushi]
+concept:(drinks) [tea beer coke]
+concept:(toiletries) [shampoo cloth sponge]
+concept:(containers) [bowl mug glass box bag]
+concept:(want) [want need desire like "would [like love]"]
+concept:(questions) ["can I" "may I"]
+concept:(ask_smthg) [~want ~questions]
+concept:(localisation) [where situation situated placed located "in which"]
+concept:(description) ["how many"]
+concept:(category) [classified separated]
+
+u:(~greetings) ~greetings Nice to see you dear
+
+u:(* ~localisation * _~snack) the $1 is on the desk in the office
+u:(* ~localisation * _~candies) the $1 is on the center table in the living room
+u:(* ~localisation * _~food) the $1 is into the fridge in the kitchen
+u:(* ~localisation * _~drinks) the $1 is into the the bar in the living room
+u:(* ~localisation * _~toiletries) the $1 is on the cupboard in the bathroom
+u:(* ~localisation * _~containers) the $1 is on the kitchen counter
+
+u:(* ~description * _~snack*) we have ^size(~snack) different snack
+u:(* ~description * _~candies*) we have ^size(~candies) different snack
+
+u:(* ~ask_smthg * _~snack {please}) ~yes what do you ~want to eat?
+    u1:(what are your snack) I have ^enumerate(~snack)
